@@ -92,3 +92,5 @@ void I2C_stop(void)
 {
 	// transmit STOP condition
 	TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+	while(TWCR & (1<<TWSTO));
+}
