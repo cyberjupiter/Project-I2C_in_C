@@ -74,24 +74,6 @@ uint8_t I2C_writeAddress(uint8_t address)
 	return 0;
 }
 
-uint8_t I2C_writeEEAddr(uint8_t data)
-{
-	// load data into data register
-	TWDR = data>>8;
-	// start transmission of data
-	TWCR = (1<<TWINT) | (1<<TWEN);
-	// wait for end of transmission
-	while( !(TWCR & (1<<TWINT)) );
-	
-	TWDR = data;
-	TWCR = (1<<TWINT) | (1<<TWEN);
-	while( !(TWCR & (1<<TWINT)) );
-	
-	if( (TWSR & 0xF8) != TW_MT_DATA_ACK ){ return 1; }
-	
-	return 0;
-}
-
 uint8_t I2C_writeData(uint8_t data)
 {
 	// load data into data register
