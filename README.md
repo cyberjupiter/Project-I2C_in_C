@@ -9,4 +9,6 @@ To port it to AVR microcontroller, simply redefine this lines in I2CinC.h
 ```
 to your AVR's SDA and SCL pins.
 
-Thanks to Peter Fleury for his polling function [I2C-master-lib] (http://homepage.hispeed.ch/peterfleury/i2cmaster.zip).
+## Credit
+
+Thanks to Peter Fleury for his polling function [Peter Fleury I2C-master-lib](http://homepage.hispeed.ch/peterfleury/i2cmaster.zip).
