@@ -24,7 +24,6 @@ void I2C_start_wait(uint8_t address);
 uint8_t I2C_read_nack(void);
 uint8_t I2C_read_ack(void);
 void I2C_stop(void);
-uint8_t I2C_receiveData(uint8_t length);
 
 #endif
 
