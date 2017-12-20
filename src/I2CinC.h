@@ -12,7 +12,7 @@ extern "C" {
 #define I2C_READ  0x01
 #define I2C_WRITE 0x00
 
-#define SDA	A4
+#define SDA A4
 #define SCL A5
 
 void I2C_init(void);
