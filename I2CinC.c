@@ -16,7 +16,6 @@
 /* I2C clock in Hz */
 #define SCL_CLOCK  100000L
 
-
 void I2C_init(void)
 {
 	digitalWrite(SDA, 1);
@@ -42,7 +41,6 @@ uint8_t I2C_start(void) // transmit address
 	
 	return 0;
 }
-
 
 /* thanks to Peter for this function */
 void I2C_start_wait(uint8_t address)
